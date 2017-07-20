@@ -1,0 +1,11 @@
+CREATE INDEX IDX_MEMBER_NAME
+ON Member (fNames, sName);
+
+CREATE INDEX IDX_MEMBERID_NAME
+ON Member (mID, fNames, sName);
+
+CREATE INDEX IDX_STAFF_POSITION
+ON Staff (position);
+
+CREATE INDEX IDX_BOOKING_SYSTEM
+ON Booking (date, sTime, eTime);

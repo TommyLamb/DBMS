@@ -1,0 +1,6 @@
+Constrain bookings by Membership level in some way
+A member must have a memebership, but that membership does not neccessarily have to be valid. IE must get a membership to be added to the system, but will remain in the system even if the membership expires. This allows advertising; offering of special rates etc.
+In order to make a booking, a member must have passed all Training courses required by any the equipment they may be booking.
+In booking a room, a member automatically books all of the equipment in that room.
+All Training courses must have been passed by at least one *staff* member (not just any member).
+If a booking uses equipment, the room must have enough un-booked pieces of equipment to satisfy it.

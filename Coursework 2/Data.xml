@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bookingsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XML Schema.xsd">
+	<bookings>
+		<date iso="2017-02-25">
+			<bookingdetail bid="1">
+				<stime>12:00</stime>
+				<etime>14:00</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW50O</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="2">
+				<stime>10:00</stime>
+				<etime>12:00</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW10V</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="3">
+				<stime>13:00</stime>
+				<etime>13:30</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW50O</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="4">
+				<stime>09:00</stime>
+				<etime>12:00</etime>
+				<room>2</room>
+				<uses>
+					<eid>RMOxf</eid>
+					<amount>3</amount>
+				</uses>
+				<uses>
+					<eid>TRPro</eid>
+					<amount>4</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="5">
+				<stime>15:00</stime>
+				<etime>18:00</etime>
+				<room>7</room>
+				<isroombooking>true</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="6">
+				<stime>19:00</stime>
+				<etime>21:30</etime>
+				<room>11</room>
+				<uses>
+					<eid>FPCom</eid>
+					<amount>1</amount>
+				</uses>
+				<uses>
+					<eid>FPMid</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>true</isroombooking>
+			</bookingdetail>
+		</date>
+		<date iso="2017-02-26">
+			<bookingdetail bid="7">
+				<stime>12:00</stime>
+				<etime>12:30</etime>
+				<room>3</room>
+				<uses>
+					<eid>ELEcl</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="8">
+				<stime>16:00</stime>
+				<etime>17:20</etime>
+				<room>3</room>
+				<uses>
+					<eid>TRPol</eid>
+					<amount>2</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="9">
+				<stime>17:20</stime>
+				<etime>18:00</etime>
+				<room>3</room>
+				<uses>
+					<eid>RMCam</eid>
+					<amount>2</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+		</date>
+	</bookings>
+	<rooms>
+		<roomdetail rnumber="1">
+			<maxcapacity>20</maxcapacity>
+			<has>
+				<eid>CW10V</eid>
+				<amount>2</amount>
+				<available>2</available>
+				<purchasedate>2012-09-13</purchasedate>
+			</has>
+			<has>
+				<eid>CW50O</eid>
+				<amount>2</amount>
+				<available>2</available>
+				<purchasedate>2012-09-13</purchasedate>
+			</has>
+			<has>
+				<eid>CWRea</eid>
+				<amount>1</amount>
+				<available>1</available>
+				<purchasedate>2012-10-02</purchasedate>
+			</has>
+		</roomdetail>
+		<roomdetail rnumber="2">
+			<maxcapacity>20</maxcapacity>
+			<has>
+				<eid>RMOxf</eid>
+				<amount>3</amount>
+				<available>3</available>
+				<purchasedate>2012-12-18</purchasedate>
+			</has>
+			<has>
+				<eid>TRPro</eid>
+				<amount>7</amount>
+				<available>6</available>
+				<purchasedate>2015-04-13</purchasedate>
+			</has>
+		</roomdetail>
+		<roomdetail rnumber="3">
+			<maxcapacity>20</maxcapacity>
+			<has>
+				<eid>RMCam</eid>
+				<amount>2</amount>
+				<available>2</available>
+				<purchasedate>2010-11-22</purchasedate>
+			</has>
+			<has>
+				<eid>ELEcl</eid>
+				<amount>3</amount>
+				<available>3</available>
+				<purchasedate>2012-08-05</purchasedate>
+			</has>
+			<has>
+				<eid>TRPol</eid>
+				<amount>5</amount>
+				<available>4</available>
+				<purchasedate>2008-12-23</purchasedate>
+			</has>
+		</roomdetail>
+		<roomdetail rnumber="4">
+			<maxcapacity>35</maxcapacity>
+			<has>
+				<eid>SBBoa</eid>
+				<amount>8</amount>
+				<available>8</available>
+				<purchasedate>2013-07-02</purchasedate>
+			</has>
+			<has>
+				<eid>SBSpe</eid>
+				<amount>8</amount>
+				<available>8</available>
+				<purchasedate>2013-07-02</purchasedate>
+			</has>
+		</roomdetail>
+		<roomdetail rnumber="7">
+			<maxcapacity>20</maxcapacity>
+		</roomdetail>
+		<roomdetail rnumber="11">
+			<maxcapacity>100</maxcapacity>
+			<has>
+				<eid>FPCom</eid>
+				<amount>1</amount>
+				<available>1</available>
+				<purchasedate>2014-02-13</purchasedate>
+			</has>
+			<has>
+				<eid>FPMid</eid>
+				<amount>2</amount>
+				<available>1</available>
+				<purchasedate>2013-07-02</purchasedate>
+			</has>
+		</roomdetail>
+	</rooms>
+	<equipment>
+		<equipmentdetail eid="CW10V">
+			<class>Climbing Wall</class>
+			<make>N/A</make>
+			<model>N/A</model>
+			<description>Our 100M Vertical climbing wall.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="CW50O">
+			<class>Climbing Wall</class>
+			<make>N/A</make>
+			<model>N/A</model>
+			<description>Our 50M tall wall with Overhang</description>
+		</equipmentdetail>
+		<equipmentdetail eid="CWRea">
+			<class>Climbing Wall</class>
+			<make>N/A</make>
+			<model>N/A</model>
+			<description>Our simulated realistic rockface climbing wall.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="RMOxf">
+			<class>Rowing Machine</class>
+			<make>The Boat Race ltd.</make>
+			<model>Oxford</model>
+			<description>Rowing machine with heartbeat sensor and digital display</description>
+		</equipmentdetail>
+		<equipmentdetail eid="TRPro">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Prolog</model>
+			<description>A treadmill full of interesting 'features'</description>
+		</equipmentdetail>
+		<equipmentdetail eid="TRPyt">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Python 3</model>
+			<description>A good treadmill for beginners and experienced users.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="TRPol">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Poly</model>
+			<description>A treadmill for the abstract.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="RMCam">
+			<class>Rowing Machine</class>
+			<make>The Boat Race ltd.</make>
+			<model>Cambridge</model>
+			<description>Sophisticated rowing machine with digital tracking technology.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="SBBoa">
+			<class>Spinning Bike</class>
+			<make>Boardman</make>
+			<model>CD-R</model>
+			<description>As used by the british olympic cylcing team.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="SBSpe">
+			<class>Spinning Bike</class>
+			<make>Specialized</make>
+			<model>NoX</model>
+			<description>A spinning bike designed to simulate real road conditions.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="ELEcl">
+			<class>Elliptical</class>
+			<make>Eclipse</make>
+			<model>Neon.2</model>
+			<description>Elliptical with a truly free feeling.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="FPCom">
+			<class>Football Pitch</class>
+			<make>n/a</make>
+			<model>n/a</model>
+			<description>Our competition sized grass pitch.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="FPMid">
+			<class>Football pitch</class>
+			<make>n/a</make>
+			<model>n/a</model>
+			<description>Out mid sized grass pitch.</description>
+		</equipmentdetail>
+	</equipment>
+</bookingsystem>

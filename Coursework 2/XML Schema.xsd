@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+   <xs:element name="bookingsystem">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="bookings">
+       <xs:complexType>
+        <xs:sequence>
+         <xs:element name="date" maxOccurs="unbounded">
+          <xs:complexType>
+           <xs:sequence>
+            <xs:element name="bookingdetail" maxOccurs="unbounded">
+             <xs:complexType>
+              <xs:sequence>
+               <xs:element name="stime" type="xs:string"></xs:element>
+               <xs:element name="etime" type="xs:string"></xs:element>
+               <xs:element name="room" type="xs:int"></xs:element>
+               <xs:element name="uses" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                 <xs:sequence>
+                  <xs:element name="eid" type="xs:string"></xs:element>
+                  <xs:element name="amount" type="xs:int"></xs:element>
+                 </xs:sequence>
+                </xs:complexType>
+               </xs:element>
+              <xs:element name="isroombooking" type="xs:boolean"></xs:element>
+             </xs:sequence>
+            <xs:attribute name="bid" type="xs:int"></xs:attribute>
+           </xs:complexType>
+          </xs:element>
+         </xs:sequence>
+        <xs:attribute name="iso" type="xs:date"></xs:attribute>
+       </xs:complexType>
+      </xs:element>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  <xs:element name="rooms">
+   <xs:complexType>
+    <xs:sequence>
+     <xs:element name="roomdetail" maxOccurs="unbounded">
+      <xs:complexType>
+       <xs:sequence>
+        <xs:element name="maxcapacity" type="xs:int"></xs:element>
+        <xs:element name="has" maxOccurs="unbounded" minOccurs="0">
+         <xs:complexType>
+          <xs:sequence>
+           <xs:element name="eid" type="xs:string"></xs:element>
+           <xs:element name="amount" type="xs:int"></xs:element>
+           <xs:element name="available" type="xs:int"></xs:element>
+           <xs:element name="purchasedate" type="xs:date"></xs:element>
+          </xs:sequence>
+         </xs:complexType>
+        </xs:element>
+       </xs:sequence>
+      <xs:attribute name="rnumber" type="xs:int"></xs:attribute>
+     </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+<xs:element name="equipment">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="equipmentdetail" maxOccurs="unbounded">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="class" type="xs:string"></xs:element>
+      <xs:element name="make" type="xs:string"></xs:element>
+      <xs:element name="model" type="xs:string"></xs:element>
+      <xs:element name="description" type="xs:string"></xs:element>
+     </xs:sequence>
+    <xs:attribute name="eid" type="xs:string"></xs:attribute>
+   </xs:complexType>
+  </xs:element>
+         </xs:sequence>
+        </xs:complexType>
+       </xs:element>
+      </xs:sequence>
+     </xs:complexType>
+	<xs:key name="bookingKey">
+	 <xs:selector xpath="./bookings/date/bookingdetail"/>
+	 <xs:field xpath="@bid"/>
+	</xs:key>
+	<xs:key name="roomKey">
+     <xs:selector xpath="./rooms/roomdetail"/>
+	 <xs:field xpath="@rnumber"/>
+    </xs:key>
+	<xs:key name="equipmentKey">
+	 <xs:selector xpath="./equipment/equipmentdetail"/>
+	 <xs:field xpath="@eid"/>
+    </xs:key>
+	<xs:keyref name="bookingEquipment" refer="equipmentKey">
+		<xs:selector xpath="./bookings/date/bookingdetail/uses"/>
+		<xs:field xpath="eid"/>
+	</xs:keyref>
+	<xs:keyref name="roomEquipment" refer="equipmentKey">
+		<xs:selector xpath="./rooms/roomdetail/has"/>
+		<xs:field xpath="eid"/>
+	</xs:keyref>
+	<xs:keyref name="bookingRoom" refer="roomKey">
+		<xs:selector xpath="./bookings/date/bookingdetail"/>
+		<xs:field xpath="room"/>
+	</xs:keyref>
+    </xs:element>
+   </xs:schema>

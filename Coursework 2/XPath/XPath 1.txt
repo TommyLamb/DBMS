@@ -1,0 +1,14 @@
+XPath Expression 1:
+//bookingdetail[room = 1]/@bid
+
+XPath Expression 1 Description:
+This XPath Expression returns all booking ids for room number 1. 
+This can be useful when an employee wants to view bookings for a particular room.
+
+XPath Expression 1 Output:
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+1
+2
+3
+</result>

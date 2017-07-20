@@ -1,0 +1,5 @@
+SELECT mStarted, COUNT(mID)
+FROM Member
+WHERE mStarted >= 20170220
+GROUP BY mStarted
+ORDER BY COUNT(mID) ASC;

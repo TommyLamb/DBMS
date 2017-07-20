@@ -1,0 +1,54 @@
+		<equipmentdetail eid="TRPro">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Prolog</model>
+			<description>A treadmill full of interesting 'features'</description>
+		</equipmentdetail>
+		<equipmentdetail eid="TRPyt">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Python 3</model>
+			<description>A good treadmill for beginners and experienced users.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="TRPol">
+			<class>Treadmill</class>
+			<make>Gabbay</make>
+			<model>Poly</model>
+			<description>A treadmill for the abstract.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="RMCam">
+			<class>Rowing Machine</class>
+			<make>The Boat Race ltd.</make>
+			<model>Cambridge</model>
+			<description>Sophisticated rowing machine with digital tracking technology.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="SBBoa">
+			<class>Spinning Bike</class>
+			<make>Boardman</make>
+			<model>CD-R</model>
+			<description>As used by the british olympic cylcing team.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="SBSpe">
+			<class>Spinning Bike</class>
+			<make>Specialized</make>
+			<model>NoX</model>
+			<description>A spinning bike designed to simulate real road conditions.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="ELEcl">
+			<class>Elliptical</class>
+			<make>Eclipse</make>
+			<model>Neon.2</model>
+			<description>Elliptical with a truly free feeling.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="FPCom">
+			<class>Football Pitch</class>
+			<make>n/a</make>
+			<model>n/a</model>
+			<description>Our competition sized grass pitch.</description>
+		</equipmentdetail>
+		<equipmentdetail eid="FPMed">
+			<class>Football pitch</class>
+			<make>n/a</make>
+			<model>n/a</model>
+			<description>Out mid sized grass pitch.</description>
+		</equipmentdetail>

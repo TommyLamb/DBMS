@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:key name="roomKey" match="roomdetail" use="@rnumber"/>
+	<xsl:key name="equipKey" match="equipmentdetail" use="@eid"/>
+	<xsl:template match="/">
+	<html>
+		<head xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>ED1 - XSLT</title>
+			<link rel="stylesheet" href="CSS.css"/>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		</head>
+		<body>
+		<h1>Sports Centre Booking Information</h1>
+		<xsl:for-each select="//date">
+			<div class="datehead">
+				<h2> <xsl:value-of select="@iso"/> </h2>
+			</div>
+			<div class="datebody">
+				<xsl:for-each select="bookingdetail">
+					<div class="booking">
+					<h3>ID: <xsl:value-of select="@bid"/> </h3>
+						Time: <xsl:value-of select="stime"/> - <xsl:value-of select="etime"/> <br/> 
+						<div class="acchead">
+							Room: <xsl:value-of select="room"/>
+						</div>
+						<div class="accbody">
+							<br/>
+							Max Capacity: <xsl:value-of select="key('roomKey', room)/maxcapacity"/> <br/>
+							<xsl:if test="count(key('roomKey', room)/has) &gt; 0">
+								Has: <br/>
+								<xsl:for-each select="key('roomKey', room)/has">
+									<xsl:value-of select="available"/> &#47; <xsl:value-of select="amount"/> of <xsl:value-of select="eid"/> available. Purchased <xsl:value-of select="purchasedate"/>. <br/> <br/>
+								</xsl:for-each>
+							</xsl:if>
+						</div>
+						<xsl:if test="count(uses) &gt; 0">
+							Uses: <br/>
+							<div class="use">
+								<xsl:for-each select="uses">
+									<div class="acchead">
+										<xsl:value-of select="eid"/> * <xsl:value-of select="amount"/>
+									</div>
+									<div class="accbody">
+										<br/>
+										Class: <xsl:value-of select="key('equipKey', eid)/class"/> <br/>
+										Make: <xsl:value-of select="key('equipKey', eid)/make"/> <br/>
+										Model: <xsl:value-of select="key('equipKey', eid)/model"/> <br/>
+										Description: <xsl:value-of select="key('equipKey', eid)/description"/> <br/>
+										<br/>
+									</div>
+								</xsl:for-each>
+							</div>
+						</xsl:if>
+						<br/>
+					</div>
+				</xsl:for-each>
+			</div>
+		</xsl:for-each>
+		<script>
+			$(".acchead").click(function(){
+				$("+.accbody", this).toggle("slow");
+			});
+			
+			$(".datehead").click(function(){
+				$("+.datebody", this).toggle("slow");
+			});
+			
+			$( function () { $(".datebody").toggle(); } );
+			
+		</script>
+		</body>
+	</html>
+	</xsl:template>
+</xsl:stylesheet>

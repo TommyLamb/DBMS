@@ -1,0 +1,17 @@
+XPath Expression 2:
+XPath: //roomdetail[maxcapacity>=20]/@rnumber
+
+XPath Expression 2 Description:
+This XPath Expression returns all room numbers relevant for rooms with a maximum capacity greater than or equal to 20. 
+This can be useful when an employee wants to view which rooms have a particular size.
+
+XPath Expression 2 Output:
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+1
+2
+3
+4
+7
+11
+</result>

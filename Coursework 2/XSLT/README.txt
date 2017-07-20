@@ -1,0 +1,2 @@
+Due to Chrome being overprotective it will refuse to open a locally linked XSL file, instead displaying a blank white screen.
+Firefox however will display the transformed XML correctly. Other browsers are untested.

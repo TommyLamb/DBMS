@@ -1,0 +1,20 @@
+
+<!-- XPath expression returning the booking IDs of all bokings made on equipment of make "Gabbay" -->
+//uses[eid = //equipmentdetail[make = "Gabbay"]/@eid]/../@bid
+<!-- Results -->
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+4
+8
+</result>
+
+<!-- returns all IDs for bookings of more than one piece of equipment (or same or different type) -->
+//bookingdetail[count(./uses) > 1]/@bid | //uses[amount > 1]/../@bid
+<!-- Results -->
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+4
+6
+8
+9
+</result>

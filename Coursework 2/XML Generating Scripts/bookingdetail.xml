@@ -1,0 +1,98 @@
+		<date iso="2017-02-25">
+			<bookingdetail bid="1">
+				<stime>12:00</stime>
+				<etime>14:00</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW50O</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="2">
+				<stime>10:00</stime>
+				<etime>12:00</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW10V</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="3">
+				<stime>13:00</stime>
+				<etime>13:30</etime>
+				<room>1</room>
+				<uses>
+					<eid>CW50O</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="4">
+				<stime>09:00</stime>
+				<etime>12:00</etime>
+				<room>2</room>
+				<uses>
+					<eid>RMOxf</eid>
+					<amount>3</amount>
+				</uses>
+				<uses>
+					<eid>TRPro</eid>
+					<amount>4</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="5">
+				<stime>15:00</stime>
+				<etime>18:00</etime>
+				<room>7</room>
+				<isroombooking>true</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="6">
+				<stime>19:00</stime>
+				<etime>21:30</etime>
+				<room>11</room>
+				<uses>
+					<eid>FPCom</eid>
+					<amount>1</amount>
+				</uses>
+				<uses>
+					<eid>FPMid</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>true</isroombooking>
+			</bookingdetail>
+		</date>
+		<date iso="2017-02-26">
+			<bookingdetail bid="7">
+				<stime>12:00</stime>
+				<etime>12:30</etime>
+				<room>3</room>
+				<uses>
+					<eid>ELEcl</eid>
+					<amount>1</amount>
+				</uses>
+				<isroombooking>n</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="8">
+				<stime>16:00</stime>
+				<etime>17:20</etime>
+				<room>3</room>
+				<uses>
+					<eid>TRPol</eid>
+					<amount>2</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+			<bookingdetail bid="9">
+				<stime>17:20</stime>
+				<etime>18:00</etime>
+				<room>3</room>
+				<uses>
+					<eid>RMCam</eid>
+					<amount>2</amount>
+				</uses>
+				<isroombooking>false</isroombooking>
+			</bookingdetail>
+		</date>

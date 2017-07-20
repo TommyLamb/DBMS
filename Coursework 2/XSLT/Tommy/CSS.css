@@ -1,0 +1,47 @@
+/*Most of the following CSS was slaved from a previous coursework for a previous course, slightly modified */
+
+* {
+	box-sizing: border-box;
+	/* forces width and height values to include margin and padding */
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+.acchead, .datehead {
+	text-decoration: underline;
+}
+
+.accbody {
+	display:none;
+}
+
+.acchead:hover, .datehead:hover {
+	background-color: RGB(230,230,230);
+	cursor: pointer;
+}
+
+
+.datebody {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+
+.booking {
+	width: 10%;
+	/*height: 300px;*/
+	/*margin: auto;*/
+	margin: 20px 2%;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+	padding-top: 1%;
+	padding-bottom: 5%;
+	min-width: 265px;
+	text-align: center;
+}
